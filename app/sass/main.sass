@@ -130,8 +130,30 @@ b, strong
         color: rgba(#ffffff, .2)
         font-famaily: arial, sans-serif
         font-style: italic
-    
 
+.mobile-menu-button
+  color: #ffffff
+  text-align: center
+  cursor: pointer
+  line-height: 65px
+  font-size: 17px
+  text-transform: uppercase
+  font-weight: bold
+  white-space: nowrap
+  display: none
+  &:hover
+    color: $accent
 
+.mobile-menu
+  display: none
+  background-color: lighten($dark, 3%)
+  border-top: lighten($dark, 5%) 1px solid
+  .top-menu
+    display: block
+  li
+    display: block
+    a
+      padding: 0
+      line-height: 45px
 
 @import "media" // Always at the end
