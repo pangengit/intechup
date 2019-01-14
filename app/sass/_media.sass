@@ -21,6 +21,17 @@
   .second-section, .third-section
     padding: $gutter/2 0
 
+  .third-section
+    padding: $gutter 0 30px
+    > div > div > div:last-of-type
+      .col-item
+        border-bottom: 0
+        padding-bottom: 0
+        margin-bottom: 0
+
+  
+
+
 
 
 // ≥768px
@@ -40,6 +51,21 @@
 
   .item-news
     margin: $gutter/2 0 0
+
+  .col-item
+    margin-bottom: $gutter/2
+    padding-bottom: $gutter
+    border-bottom: 1px solid rgba(#fff, .1)
+    // margin-top: 0px
+    &-meta
+      padding: 0 $gutter
+    a
+      img
+        margin-bottom: $gutter/2
+    .col-item-meta
+      margin-bottom: 5px
+         
+  
 // ≥576px
 +media-breakpoint-down(xs)
   
@@ -50,6 +76,9 @@
   .search-wrap
     .search
       padding-right: $gutter/2
+  
+  .fourth-section
+    padding: $gutter/1.5 0
 
 
 /*==========  Mobile First  ==========*/
