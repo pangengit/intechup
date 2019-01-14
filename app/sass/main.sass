@@ -29,8 +29,9 @@ body
 	display: block
 	max-width: 100%
 	height: auto
+
 .img-width
-    width: 100%
+  width: 100%
 
 .text-center
 	text-align: center
@@ -404,6 +405,59 @@ section
       color: #ffffff
   .item-social
     margin-top: 0px
+
+.type-one
+  &-header
+    margin-bottom: $gutter/2
+  &-first
+    > div
+      > a
+        display: block
+        background-color: $dark
+    .item-social
+      margin-top: 8px
+      a, .item-comments, .date
+        color: #a0a0a0
+        font-size: 13px
+      .item-comments-count
+        font-size: 12px
+      .date
+        display: inline-block
+        margin-left: 20px
+    h3
+      font-size: 22px
+      text-transform: uppercase
+      font-weight: 800
+      line-height: 1.2
+      margin-bottom: 30px
+      a
+        color: $text-color
+        display: block
+        // transition: color .25s ease
+      &:hover
+        a
+          color: $accent
+  .pattern
+    margin-bottom: $gutter
+
+.item-title-white
+  .date
+    font-size: 13px
+    display: inline-block
+    margin-left: 20px
+    color: #ffffff
+  .item-comments-count
+    font-size: 12px
+  .item-social
+    margin-top: 0
+  .item-title
+    min-height: 230px
+    &-content
+      padding: 40px 40px 25px
+
+
+
+
 
 @import "media" // Always at the end
 
