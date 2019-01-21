@@ -16,7 +16,7 @@ body
 	line-height: 1.5
 	font-family: $default-font
 	overflow-x: hidden
-	color: $text-color
+	color: $text-color  
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -167,7 +167,7 @@ b, strong
   margin-bottom: $gutter
 
 .container-fluid
-  max-width: 1346px
+  max-width: 1200px
   padding: 0 $gutter
   
   
@@ -228,7 +228,9 @@ section
     .overlay
       &::before
        opacity: 0.75
-
+  &-cat-header
+    &::before
+      display: none
 .overlay
   background-size: cover
   background-position: center
@@ -247,6 +249,10 @@ section
   &:hover
     &::before
       opacity: 0.75
+  &.cat-header
+    &::before
+      display: none
+  
 
 .item-social
   margin-top: 10px
@@ -333,8 +339,8 @@ section
 .date
   font-size: 13px
   color: $accent
-  font-family: boron-g, sans-serif
-  font-weight: bold
+  font-family: baron-g, sans-serif
+  font-weight: balck
   
 .aside-box
   margin-bottom: $gutter
@@ -456,9 +462,9 @@ section
       padding: 40px 40px 25px
 
 .button
-  display: inline-bloc
+  display: inline-block
   border: none
-  color: #000000
+  color: #ffffff
   text-decoration: none
   background-color: $accent
   padding: 12px 40px
@@ -482,6 +488,292 @@ section
 .s_more
   padding: $gutter*2 0
   background-color: #f5f5f5
+
+.main-footer
+  background-color: $dark-blue
+  padding: 25px 0
+  border-bottom: 1px solid rgba(#fff, .1)
+
+
+.bottom-footer
+  background-color: $dark-blue
+  padding: 25px 0 35px
+  .logo
+    display: inline-block
+  p
+    color: rgba(#fff, .1)
+    font-size: 12px
+    margin: 5px
+  .footer-copy
+    color: rgba(#ffffff, .45)
+    font-size: 13px
+    font-family: baron-g, sans-serif
+    
+
+
+.footer-menu
+  li
+    &.active
+      text-decoration: underline
+      background-color: none
+      a
+        background: none
+    a
+      font-size: 15px
+      padding: 0 10px
+      &:hover
+        text-decoration: underline
+        background: none
+
+nav.soc
+  padding: 15px 0 20px
+  
+  ul, li
+    margin: 0
+    padding: 0
+    list-style-type: none
+    text-align: center
+  li
+    display: inline-block
+    a
+      display: block
+      text-align: center
+      border: 1px solid rgba(#fff, .1)
+      border-radius: 10em
+      width: 52px
+      height: 52px
+      line-height: 50px
+      color: #ffffff
+      font-size: 24px
+      margin: 4px
+      transition: border-color .25s ease, opacity .25s ease
+      .fa
+        transition: opacity .25s ease
+        opacity: 0.55
+      &:hover
+        border-color: rgba(#fff, .35)
+        .fa
+          opacity: 1
+
+.logo-footer
+  span
+    color: $accent
+  
+.cat-header
+  background-size: cover
+  background-position: center
+  position: relative
+  &::before
+    content: ''
+    opacity: 0.25
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+  &-block
+    position: relative
+    padding: 100px 80px 100px
+    color: #ffffff
+    background-color: rgba($dark, 0.8)
+    &::before
+      content: ''
+      opacity: 0.2
+      transition: opacity .25s ease, top.25s ease, left .25s ease, bottom .25s ease, right .25s ease
+      z-index: 1
+      position: absolute
+      border: 1px solid #ffffff
+      top: 10px
+      right: 10px
+      left: 10px
+      bottom: 10px
+    p, h1, h2
+      margin: 0
+    h1, h2
+      font-size: 30px
+      text-transform: uppercase
+      margin-bottom: 15px
+    &.overlay
+      &:hover
+        &::before
+          opacity: 0.25
+
+.cat-list-first
+  padding-top: $gutter
+  background-color: #f5f5f5
+
+.type-one-cat
+  background-color: transparent
+  padding: 0
+
+.cat-list
+  padding-top: $gutter
+  background-color: #ffffff
+
+a.cat-list-item
+  color: $text-color
+  display: block
+  text-decoration: none
+  margin: 
+    bottom: $gutter/1.5
+    top: $gutter/1.5
+  padding-bottom: 4px
+  border-bottom: 1px solid #dfdfdf
+  h2, h3
+    transition: color .25s ease
+    line-height: 1.2
+    font-size: 21px
+    font-weight: 800
+    margin: 0
+  img
+    transition: opacity .25s ease
+    margin-bottom: 12px
+  p 
+    font-size: 15.4px
+    margin-top: 10px
+  .date
+    margin-top: 5px
+  &:hover
+    .pattern
+      &::before
+        top: 10px
+        right: 10px
+        bottom: 10px 
+        left: 10px 
+        opacity: 0.2
+        z-index: 10
+      img
+        opacity: 0.75
+    h2, h3
+      text-decoration: underline
+      color: $accent
+    p
+      color: $text-color
+  &:last-child
+    border-bottom: none
+
+.main-aside
+  margin-bottom: $gutter
+  
+.lb-header
+  border-bottom: 2px solid $accent
+  padding-bottom: 5px
+  text-transform: none\
+
+.lb-header, .all-posts-header
+  font-size: 21px
+  // text-transform: uppercase
+  font-weight: 800
+  margin: 0
+  text-align: left
+
+.lb-list
+  margin-top: 20px
+
+.lb-item
+  position: relative
+  padding-left: 120px
+  background-color: #f0f0f0
+  margin-bottom: 2px
+  transition: background-color .25s ease
+  text-align: left
+  &:hover
+    background-color: $accent
+    .lb-catname
+      color: #ffffff
+  .lb-body
+    background-color: #f9f9f9
+    padding: 10px 15px
+    a
+      color: $text-color
+      transition: color .25s ease
+      &:hover
+        color: $accent
+  &-header
+    display: block
+    font-size: 14px
+    line-height: 1.4
+    font-weight: 500
+  .date
+    display: inline-block
+    margin-left: 20px
+    color: #aaaaaa
+    margin-top: 0
+  .item-comments
+    .fa
+      font-size: 12px
+      margin-right: 5px
+      color: #aaaaaa
+    .item-comments-count
+      color: #aaaaaa
+      &:hover
+        color: $accent
+        &::after
+          color: #aaaaaa
+
+.lb-catname
+  display: block
+  position: absolute
+  left: 15px
+  top: 15px
+  color: #888888
+  font-size: 14px
+  font-weight: 800
+  max-width: 100px
+  transition: color .25s ease
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+    color: #ffffff
+  &:focus
+    color: #888888
+
+
+.lb-footer
+  line-height: 1.2
+
+.pagination-section
+  padding: $gutter*2 0
+  background-color: #f5f5f5
+  &-first
+    padding: $gutter 0
+    background-color: #ffffff
+    margin-bottom: $gutter
+    border-bottom: 1px solid #dfdfdf
+  
+.pagination
+  padding-top: 12px
+  a, span
+    display: inline-block
+    margin-top: 5px
+    width: 42px
+    height: 42px
+    line-height: 38px
+    border: 2px solid #e5e5e5
+    border-radius: 10em
+    font-weight: 800
+    text-decoration: none
+    color: #666666
+    transition: border-color .25s ease, color .25s ease
+  a
+    &:hover
+      border-color: $accent
+      color: $accent
+    &.pagination-left, &.pagination-right
+      color: $accent
+  span
+    &.active
+      border-color: $accent
+      color: $accent
+  .pagination-left, .pagination-right
+    border: none
+    font-size: 32px
+    width: 30px
+
+
+   
+
+
 
 
 
